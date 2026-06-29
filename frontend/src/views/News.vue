@@ -5,7 +5,8 @@
         <div class="news-header">
           <span>实时资讯</span>
           <div>
-            <el-input v-model="keyword" placeholder="搜索资讯" size="small" style="width:200px;margin-right:8px" clearable @change="onSearch" />
+            <el-input v-model="keyword" placeholder="搜索资讯" size="small" style="width:200px;margin-right:4px" clearable @keyup.enter="onSearch" />
+            <el-button type="primary" :icon="Search" size="small" @click="onSearch">搜索</el-button>
             <el-button :icon="Refresh" size="small" @click="loadNews">刷新</el-button>
           </div>
         </div>
@@ -36,7 +37,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { Refresh } from '@element-plus/icons-vue'
+import { Refresh, Search } from '@element-plus/icons-vue'
 import request from '../utils/request'
 
 const keyword = ref('')

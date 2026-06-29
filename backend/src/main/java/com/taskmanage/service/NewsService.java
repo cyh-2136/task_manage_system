@@ -1,6 +1,6 @@
 package com.taskmanage.service;
 
-import com.taskmanage.model.dto.NewsDTO;
+import com.taskmanage.model.news.dto.NewsDTO;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.taskmanage.dto;
+package com.taskmanage.model.task.dto;
 
 import com.alibaba.excel.annotation.ExcelProperty;
 import lombok.Data;

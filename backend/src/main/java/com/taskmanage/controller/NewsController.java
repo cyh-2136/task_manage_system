@@ -2,8 +2,8 @@ package com.taskmanage.controller;
 
 import com.taskmanage.annotation.RequireRole;
 import com.taskmanage.common.Result;
-import com.taskmanage.dto.PageResult;
-import com.taskmanage.model.dto.NewsDTO;
+import com.taskmanage.model.common.dto.PageResult;
+import com.taskmanage.model.news.dto.NewsDTO;
 import com.taskmanage.service.NewsService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

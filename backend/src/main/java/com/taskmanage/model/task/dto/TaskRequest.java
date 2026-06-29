@@ -1,7 +1,7 @@
-package com.taskmanage.dto;
+package com.taskmanage.model.task.dto;
 
-import com.taskmanage.model.enums.TaskPriorityEnum;
-import com.taskmanage.model.enums.TaskStatusEnum;
+import com.taskmanage.model.task.enums.TaskPriorityEnum;
+import com.taskmanage.model.task.enums.TaskStatusEnum;
 import com.taskmanage.validation.EnumValue;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;

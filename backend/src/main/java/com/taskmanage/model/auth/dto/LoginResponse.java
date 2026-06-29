@@ -1,4 +1,4 @@
-package com.taskmanage.dto;
+package com.taskmanage.model.auth.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

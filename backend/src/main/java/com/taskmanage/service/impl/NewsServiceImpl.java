@@ -4,7 +4,7 @@ import com.rometools.rome.feed.synd.SyndEntry;
 import com.rometools.rome.feed.synd.SyndFeed;
 import com.rometools.rome.io.SyndFeedInput;
 import com.rometools.rome.io.XmlReader;
-import com.taskmanage.model.dto.NewsDTO;
+import com.taskmanage.model.news.dto.NewsDTO;
 import com.taskmanage.service.NewsService;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package com.taskmanage.dto;
+package com.taskmanage.model.task.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;

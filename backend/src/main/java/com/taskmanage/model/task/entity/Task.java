@@ -1,25 +1,30 @@
-package com.taskmanage.entity;
+package com.taskmanage.model.task.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
-@TableName("sys_user")
-public class User {
+@TableName("task")
+public class Task {
     @TableId(type = IdType.ASSIGN_ID)
     private Long id;
 
-    private String username;
+    private String title;
 
-    private String password;
+    private String description;
 
-    private String nickname;
+    private String status;
 
-    private String role;
+    private String priority;
 
-    private String avatar;
+    private Long assigneeId;
+
+    private Long creatorId;
+
+    private LocalDate deadline;
 
     @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createdTime;

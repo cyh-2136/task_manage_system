@@ -2,7 +2,7 @@ package com.taskmanage.aspect;
 
 import com.taskmanage.annotation.RequireRole;
 import com.taskmanage.common.ErrorCode;
-import com.taskmanage.entity.User;
+import com.taskmanage.model.common.entity.User;
 import com.taskmanage.exception.BusinessException;
 import com.taskmanage.util.JwtUtil;
 import com.taskmanage.service.UserService;

@@ -1,11 +1,11 @@
 package com.taskmanage.service;
 
-import com.taskmanage.dto.PageResult;
-import com.taskmanage.dto.TaskExportDTO;
-import com.taskmanage.dto.TaskQueryRequest;
-import com.taskmanage.dto.TaskRequest;
-import com.taskmanage.dto.TaskStatisticsDTO;
-import com.taskmanage.entity.Task;
+import com.taskmanage.model.common.dto.PageResult;
+import com.taskmanage.model.task.dto.TaskExportDTO;
+import com.taskmanage.model.task.dto.TaskQueryRequest;
+import com.taskmanage.model.task.dto.TaskRequest;
+import com.taskmanage.model.task.dto.TaskStatisticsDTO;
+import com.taskmanage.model.task.entity.Task;
 
 import java.util.List;
 

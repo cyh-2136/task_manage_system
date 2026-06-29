@@ -1,7 +1,7 @@
 package com.taskmanage.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.taskmanage.entity.User;
+import com.taskmanage.model.common.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

@@ -1,4 +1,4 @@
-package com.taskmanage.dto;
+package com.taskmanage.model.auth.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;

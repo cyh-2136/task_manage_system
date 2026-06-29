@@ -24,10 +24,14 @@
           <span style="margin:0 6px">至</span>
           <el-date-picker v-model="filters.deadlineEnd" type="date" placeholder="结束日期" value-format="YYYY-MM-DD" style="width:140px" @change="onFilterChange" />
         </el-form-item>
+        <el-form-item v-if="isMentor" label="负责人">
+          <el-input v-model="filters.assigneeId" placeholder="用户ID" clearable style="width:140px" @change="onFilterChange" />
+        </el-form-item>
         <el-form-item label="关键词">
           <el-input v-model="filters.keyword" placeholder="搜索标题" clearable style="width:160px" @change="onFilterChange" />
         </el-form-item>
         <el-form-item>
+          <el-button type="primary" :icon="Search" @click="onFilterChange">搜索</el-button>
           <el-button :icon="Refresh" @click="loadTasks">刷新</el-button>
         </el-form-item>
       </el-form>
@@ -202,7 +206,7 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
-import { Plus, Refresh, Grid, Download } from '@element-plus/icons-vue'
+import { Plus, Refresh, Grid, Download, Search } from '@element-plus/icons-vue'
 import request from '../utils/request'
 
 const tasks = ref([])
@@ -225,7 +229,8 @@ const filters = reactive({
   status: '',
   deadlineStart: '',
   deadlineEnd: '',
-  keyword: ''
+  keyword: '',
+  assigneeId: ''
 })
 
 const form = reactive({
@@ -267,6 +272,7 @@ function buildParams() {
   if (filters.deadlineStart) p.deadlineStart = filters.deadlineStart
   if (filters.deadlineEnd) p.deadlineEnd = filters.deadlineEnd
   if (filters.keyword) p.keyword = filters.keyword
+  if (filters.assigneeId) p.assigneeId = filters.assigneeId
   p.page = page.value
   p.pageSize = pageSize.value
   return p

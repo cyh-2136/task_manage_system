@@ -1,4 +1,4 @@
-package com.taskmanage.model.dto;
+package com.taskmanage.model.news.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

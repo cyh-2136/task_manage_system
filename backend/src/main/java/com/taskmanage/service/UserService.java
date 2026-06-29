@@ -1,9 +1,9 @@
 package com.taskmanage.service;
 
-import com.taskmanage.dto.LoginRequest;
-import com.taskmanage.dto.LoginResponse;
-import com.taskmanage.dto.RegisterRequest;
-import com.taskmanage.entity.User;
+import com.taskmanage.model.auth.dto.LoginRequest;
+import com.taskmanage.model.auth.dto.LoginResponse;
+import com.taskmanage.model.auth.dto.RegisterRequest;
+import com.taskmanage.model.common.entity.User;
 
 public interface UserService {
     LoginResponse login(LoginRequest request);

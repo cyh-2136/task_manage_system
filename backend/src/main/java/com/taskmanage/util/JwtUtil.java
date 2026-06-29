@@ -1,7 +1,7 @@
 package com.taskmanage.util;
 
 import com.taskmanage.common.Result;
-import com.taskmanage.entity.User;
+import com.taskmanage.model.common.entity.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;

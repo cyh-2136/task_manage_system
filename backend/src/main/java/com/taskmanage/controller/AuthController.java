@@ -2,9 +2,9 @@ package com.taskmanage.controller;
 
 import com.taskmanage.annotation.RequireRole;
 import com.taskmanage.common.Result;
-import com.taskmanage.dto.LoginRequest;
-import com.taskmanage.dto.LoginResponse;
-import com.taskmanage.dto.RegisterRequest;
+import com.taskmanage.model.auth.dto.LoginRequest;
+import com.taskmanage.model.auth.dto.LoginResponse;
+import com.taskmanage.model.auth.dto.RegisterRequest;
 import com.taskmanage.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
