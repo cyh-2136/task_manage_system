@@ -79,10 +79,9 @@ npm run dev
 ```
 backend/               # Spring Boot 后端
 frontend/              # Vue 3 前端
-设计文档.md             # 设计文档
 README.md              # 本文件
 ```
 
 ## AI 辅助说明
 
-本项目使用 Claude (opencode) 作为主要 AI 开发助手，协助完成了代码生成、bug 调试、架构设计等工作。详见 `设计文档.md` 第五章。
+本项目使用 opencode 作为主要 AI 开发助手，协助完成了代码生成、bug 调试、架构设计等工作。
