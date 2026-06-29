@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>实习生初试项目要求</title>
+    <style>
+        /* 全局重置与排版 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f7fb;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            line-height: 1.7;
+            color: #1e293b;
+        }
+
+        .document-container {
+            max-width: 1000px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08), 0 8px 20px rgba(0, 0, 0, 0.04);
+            padding: 50px 60px;
+            transition: all 0.2s ease;
+        }
+
+        /* 标题区 */
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: #0f172a;
+            border-bottom: 4px solid #3b82f6;
+            padding-bottom: 18px;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        h1::before {
+            content: "📋";
+            font-size: 30px;
+            font-weight: 400;
+        }
+
+        /* 二级标题 */
+        h2 {
+            font-size: 24px;
+            font-weight: 650;
+            color: #0f172a;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            padding-left: 14px;
+            border-left: 6px solid #3b82f6;
+            line-height: 1.3;
+        }
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        /* 三级标题 (加粗段落) */
+        h3 {
+            font-size: 18px;
+            font-weight: 650;
+            color: #1e293b;
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+
+        /* 段落与列表 */
+        p {
+            margin-bottom: 14px;
+            font-size: 16px;
+        }
+
+        ul,
+        ol {
+            margin: 10px 0 18px 24px;
+            padding-left: 8px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        /* 嵌套列表缩进 */
+        ul ul,
+        ol ul {
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+
+        /* 加粗强调 */
+        strong {
+            color: #0f172a;
+            font-weight: 650;
+        }
+
+        /* 功能描述引用块 */
+        .feature-block {
+            background: #f8fafc;
+            border-left: 4px solid #3b82f6;
+            padding: 16px 22px;
+            border-radius: 10px;
+            margin: 18px 0 16px 0;
+        }
+        .feature-block p {
+            margin-bottom: 4px;
+        }
+
+        /* 要求列表 (带序号) */
+        .requirement-list {
+            list-style-type: decimal;
+            padding-left: 24px;
+        }
+        .requirement-list li {
+            margin-bottom: 10px;
+        }
+
+        /* 技术栈标签 */
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 14px 0 8px 0;
+        }
+        .tech-tag {
+            background: #eef2ff;
+            color: #1e40af;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid #c7d2fe;
+        }
+
+        /* 交付物列表 */
+        .deliverable-list {
+            list-style-type: decimal;
+            padding-left: 24px;
+        }
+        .deliverable-list li {
+            margin-bottom: 6px;
+        }
+        .deliverable-list ul {
+            margin-top: 4px;
+            margin-bottom: 6px;
+        }
+
+        /* 评测重点卡片 */
+        .eval-box {
+            background: #f0f9ff;
+            border: 1px solid #b8d9fc;
+            border-radius: 16px;
+            padding: 24px 28px;
+            margin-top: 30px;
+            margin-bottom: 6px;
+        }
+        .eval-box p {
+            margin-bottom: 4px;
+            font-weight: 500;
+            color: #075985;
+        }
+        .eval-box ul {
+            margin: 6px 0 0 22px;
+        }
+        .eval-box li {
+            font-weight: 400;
+            color: #1e293b;
+        }
+
+        /* 分割线 */
+        hr {
+            border: none;
+            border-top: 2px dashed #e2e8f0;
+            margin: 36px 0 20px 0;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 12px;
+            }
+            .document-container {
+                padding: 28px 20px;
+                border-radius: 18px;
+            }
+            h1 {
+                font-size: 26px;
+                padding-bottom: 14px;
+            }
+            h2 {
+                font-size: 20px;
+                padding-left: 10px;
+            }
+            .tech-tags {
+                gap: 6px;
+            }
+            .tech-tag {
+                font-size: 13px;
+                padding: 3px 12px;
+            }
+            .eval-box {
+                padding: 18px 18px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 20px;
+            }
+            .document-container {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+            }
+            .eval-box {
+                background: #f9f9f9;
+                border-color: #aaa;
+            }
+            .tech-tag {
+                background: #eee;
+                border-color: #bbb;
+                color: #000;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="document-container">
+
+        <!-- 主标题 -->
+        <h1>实习生初试项目要求</h1>
+
+        <!-- 一、项目背景 -->
+        <h2>一、项目背景</h2>
+        <p>公司需要一个简单的内部任务管理系统，用于实习生和导师之间分配、跟踪日常任务。要求在"2天（48小时）"内完成一个可运行的MVP版本。</p>
+
+        <!-- 二、实现功能 -->
+        <h2>二、实现功能</h2>
+
+        <h3>1. 用户任务管理（Backend + Frontend）</h3>
+        <ul>
+            <li>用户登录/注册（可简化，使用JWT或Session，允许Mock登录）</li>
+            <li>任务CRUD：创建、查看、编辑、删除任务</li>
+            <li>任务状态流转：待办 → 进行中 → 已完成（支持拖拽或按纽切换）</li>
+            <li>任务筛选/搜索（按状态、负责人、截止日期）</li>
+            <li>获取实时资讯模块（skill构建和应用能力）</li>
+        </ul>
+
+        <div class="feature-block">
+            <p><strong>功能描述：</strong>系统需要增加一个"<strong>实施资讯</strong>"专区或侧边栏/独立页面，能够自动或手动获取外部真实资讯，并与任务关联。</p>
+        </div>
+
+        <p><strong>具体要求（必须实现至少以下2条）：</strong></p>
+        <ol class="requirement-list">
+            <li>调用公开的第三方API或RSS，获取最新相关资讯（例如科技行业动态、编程技术资讯、公司相关新闻等）。</li>
+            <li>在任务详情页或任务表单中，能关联显示相关资讯（例如创建"Java后端"任务时，自动/手动获取最新Spring Boot新闻）。</li>
+            <li>支持资讯的展示、简单搜索和刷新功能。</li>
+        </ol>
+
+        <h3>2. 核心页面（Vue前端）</h3>
+        <ul>
+            <li>登录页</li>
+            <li>任务列表页（支持卡片/表格两种视图切换）</li>
+            <li>任务详情/编辑弹窗</li>
+            <li>个人仪表盘（我的待办、已完成统计）</li>
+        </ul>
+
+        <h3>3. 额外加分项（可选，但强烈建议尝试，体现设计能力）</h3>
+        <ul>
+            <li>任务优先级（高/中/低）+ 颜色区分</li>
+            <li>简单统计图表（使用Echarts或Chart.js展示完成率）</li>
+            <li>任务截止日期提醒（前端倒计时或后端简单校验）</li>
+            <li>导师可查看所有任务，实习生只能看自己的</li>
+            <li>导出任务列表为Excel/CSV</li>
+        </ul>
+
+        <!-- 三、技术栈要求 -->
+        <h2>三、技术栈要求（必须使用）</h2>
+        <ul>
+            <li><strong>后端：</strong>Java + Spring Boot（推荐Spring Boot 3.x + MyBatis-Plus或JPA）</li>
+            <li><strong>数据库：</strong>MySQL（允许使用H2内存数据库快速开发）</li>
+            <li><strong>前端：</strong>Vue3（Composition API）+ Vite + Element Plus / Ant Design Vue / Naive UI</li>
+            <li><strong>其他：</strong>RESTful API、Axios、CORS处理</li>
+            <li><strong>允许工具：</strong>任意AI工具（Cursor、Copilot、ChatGPT、Claude、通义千问等）均可使用，但必须在代码中或文档中说明AI辅助的部分</li>
+        </ul>
+
+        <!-- 四、交付物 -->
+        <h2>四、交付物</h2>
+        <ol class="deliverable-list">
+            <li>完整可运行代码（Git仓库链接，最好有README）</li>
+            <li>数据库脚本（SQL）</li>
+            <li>
+                一份设计文档（1-2页即可，Markdown或PDF），必须包含：
+                <ul>
+                    <li>系统架构图（手绘或工具绘制）</li>
+                    <li>数据库表设计（ER图或表结构）</li>
+                    <li>主要API接口设计</li>
+                    <li>技术选型理由 + AI工具使用心得（用了哪些AI、如何验证AI生成的代码、遇到的坑）</li>
+                    <li>具体问题截图</li>
+                    <li>遇到的问题及解决思路（具体问题截图）</li>
+                </ul>
+            </li>
+        </ol>
+
+        <!-- 五、提交时间和路径 -->
+        <h2>五、提交时间和路径</h2>
+        <ol class="deliverable-list">
+            <li>所有交付物整理到一个文件夹中，文件夹名称为"个人姓名"</li>
+            <li>请在 <strong>2026年6月30日18：00前</strong> 将文件以邮件方式发送提交</li>
+            <li>邮件主题请为"<strong>个人姓名-全栈实习实操笔记</strong>"</li>
+            <li>邮件请发送给【<a href="mailto:nitao@icinfo.com.cn">nitao@icinfo.com.cn</a>；<a href="mailto:xiangyuyu@icinfo.com.cn">xiangyuyu@icinfo.com.cn</a>】</li>
+        </ol>
+
+        <hr />
+
+        <!-- 评测重点 -->
+        <div class="eval-box">
+            <p><strong>📌 评测重点：</strong></p>
+            <ul>
+                <li>设计思路是否清晰（分层、模块化、前后端分离思想）</li>
+                <li>代码结构是否规范（包结构、命名、异常处理）</li>
+                <li>AI工具使用能力（是否高效使用、是否能发现并修正AI错误）</li>
+                <li>功能完整度和UI体验</li>
+                <li>文档质量和思考深度</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
