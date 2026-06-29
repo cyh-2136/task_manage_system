@@ -1,3 +1,6 @@
+完整仓库地址：https://github.com/cyh-2136/task_manage_system
+数据库脚本地址：taskManageSystem\backend\src\main\resources\db
+
 # 内部任务管理系统
 
 一个支持导师和实习生协作的简易任务管理平台，基于 Spring Boot 3 + Vue 3 全栈实现。
